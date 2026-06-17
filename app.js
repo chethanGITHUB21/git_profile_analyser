@@ -7,7 +7,11 @@ const githubRoutes = require("./routes/githubRoutes");
 app.use("/api/github", githubRoutes);
 
 // basic health
-app.get("/", (req, res) => res.send("OK"));
+app.get("/", (req, res) =>
+  res.send(
+    "Server is listening on gitprofileanalyser-production.up.railway.app",
+  ),
+);
 
 // error handler (should be after all routes)
 const errorHandler = require("./middleware/errorHandler");
