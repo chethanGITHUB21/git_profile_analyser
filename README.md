@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # GitHub Profile Analyzer Backend
 
 Node.js + Express backend for fetching GitHub profile data, storing normalized raw data in MySQL, and generating analytics dynamically through SQL views.
@@ -357,3 +358,6 @@ For public profile and public repository reads, avoid broad scopes unless you tr
 - GitHub usernames must match exactly. `chethanGITHUB` and `chethanGITHUB21` are different accounts.
 - The `/insights` endpoint stores only raw profile and repository data, then computes analytics through SQL views.
 - MySQL 8+ is recommended because the primary-language view uses `ROW_NUMBER()`.
+=======
+# git_profile_analyser
+>>>>>>> 6044aec42adfba6a94b031e04f30bbd48e069124
