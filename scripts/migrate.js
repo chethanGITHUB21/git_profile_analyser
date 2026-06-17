@@ -5,8 +5,8 @@ require('dotenv').config();
 (async () => {
   try {
     const sql = await fs.readFile(__dirname + '/../database/schema.sql', 'utf8');
-    const dbUrl = process.env.DATABASE_URL;
-    if (!dbUrl) throw new Error('DATABASE_URL not set in environment');
+    const dbUrl = process.env.MYSQL_URL || process.env.DATABASE_URL;
+    if (!dbUrl) throw new Error('MYSQL_URL not set in environment');
 
     const parsed = new URL(dbUrl);
     const conn = await mysql.createConnection({
